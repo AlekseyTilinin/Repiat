@@ -22,14 +22,14 @@ class PostViewController: UIViewController {
         
         addConstraints()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showInfoViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showInfoViewController))
     }
     
     private func addConstraints() {
         view.addSubview(titleLabale)
         
         NSLayoutConstraint.activate([
-            titleLabale.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
+            titleLabale.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             titleLabale.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
