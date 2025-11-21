@@ -54,6 +54,7 @@ class ProfileHeaderView: UIView {
         textField.clearButtonMode = .whileEditing
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 0))
         textField.leftViewMode = .always
+        textField.addTarget(self, action: #selector(statusTextChanged), for: .editingChanged)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -69,6 +70,7 @@ class ProfileHeaderView: UIView {
         button.layer.shadowRadius = 4
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.7
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -113,5 +115,20 @@ class ProfileHeaderView: UIView {
                     showStatusButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
                     showStatusButton.heightAnchor.constraint(equalToConstant: 50)
                 ])
+    }
+    
+    @objc func statusTextChanged() {
+        statusText = statusTextField.text ?? ""
+    }
+    
+    @objc func buttonPressed() {
+        
+        profileStatus.text = statusText
+        profileStatus.textColor = .black
+        
+        // Убираем фокус с элемента и очищаем поле ввода текста
+        
+        statusTextField.resignFirstResponder()
+        statusTextField.text = ""
     }
 }
