@@ -16,6 +16,7 @@
 		5B7AA9FF2EACF5E300BDA170 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AA9FE2EACF5E300BDA170 /* PostViewController.swift */; };
 		5B7AAA042EACFD6500BDA170 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AAA032EACFD6500BDA170 /* Post.swift */; };
 		5B7AAA062EAD61D900BDA170 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AAA052EAD61D900BDA170 /* InfoViewController.swift */; };
+		5B7AAA082ED06FC200BDA170 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AAA072ED06FC200BDA170 /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5B7AA9FE2EACF5E300BDA170 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		5B7AAA032EACFD6500BDA170 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5B7AAA052EAD61D900BDA170 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		5B7AAA072ED06FC200BDA170 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				5B62A2912EA4EEBB006C10F4 /* Assets.xcassets */,
 				5B62A2932EA4EEBB006C10F4 /* LaunchScreen.storyboard */,
 				5B62A2962EA4EEBB006C10F4 /* Info.plist */,
+				5B7AAA072ED06FC200BDA170 /* ProfileHeaderView.swift */,
 			);
 			path = Repeat;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				5B7AAA042EACFD6500BDA170 /* Post.swift in Sources */,
 				5B62A28B2EA4EEBA006C10F4 /* SceneDelegate.swift in Sources */,
 				5B7AA9FF2EACF5E300BDA170 /* PostViewController.swift in Sources */,
+				5B7AAA082ED06FC200BDA170 /* ProfileHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

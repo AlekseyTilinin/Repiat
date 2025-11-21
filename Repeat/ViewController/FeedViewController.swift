@@ -12,7 +12,7 @@ class FeedViewController: UIViewController {
     
     var post = Post(postTitle: "Post")
     
-    private lazy var postViewButton:UIButton = {
+    private lazy var postViewButton: UIButton = {
         let button = UIButton()
         button.setTitle(" Feeds ", for: .normal)
         button.setTitleColor(.white, for: .normal)
