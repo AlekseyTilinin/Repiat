@@ -23,6 +23,24 @@ class FeedViewController: UIViewController {
         return button
     }()
     
+    private lazy var testViewButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(" Feeds ", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(showPostViewController), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 10
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,11 +48,14 @@ class FeedViewController: UIViewController {
     }
     
     private func addConstraints() {
-        view.addSubview(postViewButton)
+        view.addSubview(stackView)
+        
+        stackView.addArrangedSubview(postViewButton)
+        stackView.addArrangedSubview(testViewButton)
         
         NSLayoutConstraint.activate([
-            postViewButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            postViewButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
     
