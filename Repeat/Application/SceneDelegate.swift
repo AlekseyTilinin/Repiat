@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = UITabBarController()
         
         firstTabNavigationController = UINavigationController.init(rootViewController: FeedViewController())
-        secondTabNavigationController = UINavigationController.init(rootViewController: ProfileViewController())
+        secondTabNavigationController = UINavigationController.init(rootViewController: LogInViewController())
         
         tabBarController.viewControllers = [firstTabNavigationController, secondTabNavigationController]
         
@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         firstTabNavigationController.tabBarItem = item1
         secondTabNavigationController.tabBarItem = item2
         
-        UITabBar.appearance().tintColor = .purple
+        UITabBar.appearance().tintColor = UIColor(named: "AccentColor")
         UITabBar.appearance().backgroundColor = .systemBackground
         
         let window = UIWindow(windowScene: windowScene)
