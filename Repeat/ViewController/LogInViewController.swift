@@ -75,10 +75,15 @@ class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        self.view.backgroundColor = .white
     
-        addConstraints()
-        setupGestures()
+        self.addConstraints()
+        self.setupGestures()
+    }
+    
+    private func setupGestures() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.forcedHidingKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -137,11 +142,6 @@ class LogInViewController: UIViewController {
             logInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             logInButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-    }
-    
-    private func setupGestures() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.forcedHidingKeyboard))
-        self.view.addGestureRecognizer(tapGesture)
     }
     
     @objc private func didShowKeyboard(_ notification: Notification) {

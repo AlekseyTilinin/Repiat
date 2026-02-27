@@ -12,7 +12,7 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cyan
-        title = FeedViewController().post.postTitle
+//        title = FeedViewController().post.postTitle
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showInfoViewController))
     }

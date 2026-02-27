@@ -8,9 +8,6 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-
-    
-    var post = Post(postTitle: "Post")
     
     private lazy var postViewButton: UIButton = {
         let button = UIButton()
